@@ -113,6 +113,7 @@ namespace LinkedList_244
                     Console.Write("\nThe previous node is null.");
                 }
             }
+
         }
         public Node DeleteFirstElemt()
         {
@@ -142,29 +143,27 @@ namespace LinkedList_244
             return head;
 
         }
-        public void SearchAValue(int value)
+        public void AddAfter(int exValue, int addValue)
+        {
+            int posi = SearchAValue(exValue);
+            InsertMethod(addValue, posi + 1);
+        }
+        public int SearchAValue(int value)
         {
             Node temp = this.head;
-            int find = 0;
+            int position = 0;
             int i = 0;
             while (temp != null)
             {
                 i++;
                 if (temp.data == value)
                 {
-                    find++;
+                    position++;
                     break;
                 }
                 temp = temp.next;
             }
-            if (find == 1)
-            {
-                Console.WriteLine($"The position of value {value} is {i}");
-            }
-            else
-            {
-                Console.WriteLine("The value {0} not present in LinkedList", value);
-            }
+            return i;
         }
 
 
@@ -174,7 +173,7 @@ namespace LinkedList_244
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("The LinkedList is Empty");
+                Console.WriteLine("The LinkedList is Emptay");
                 return;
             }
             else

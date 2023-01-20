@@ -68,13 +68,8 @@ namespace LinkedList_244
         {
 
             Node newNode = new Node(newElement);
-
             newNode.data = newElement;
-
             newNode.next = null;
-
-
-
 
             if (position < 1)
 
@@ -83,7 +78,6 @@ namespace LinkedList_244
                 Console.Write("\nposition should be >= 1.");
 
             }
-
             else if (position == 1)
 
             {
@@ -93,49 +87,41 @@ namespace LinkedList_244
                 head = newNode;
 
             }
-
             else
 
             {
 
                 Node temp = new Node(newElement);
-
                 temp = head;
 
                 for (int i = 1; i < position - 1; i++)
 
                 {
-
                     if (temp != null)
-
                     {
-
                         temp = temp.next;
-
                     }
-
                 }
 
                 if (temp != null)
-
                 {
-
                     newNode.next = temp.next;
-
                     temp.next = newNode;
-
                 }
-
                 else
-
                 {
-
                     Console.Write("\nThe previous node is null.");
-
                 }
-
             }
-
+        }
+        public Node DeleteFirstElemt()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("The LinkedList is Empty"); ;
+            }
+            this.head = head.next;
+            return this.head;
         }
 
 

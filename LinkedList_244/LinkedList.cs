@@ -10,7 +10,7 @@ namespace LinkedList_244
     {
         public Node head;
 
-        public void Add(int data)
+        public void Append(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -26,7 +26,7 @@ namespace LinkedList_244
                 }
                 temp.next = node;
             }
-            Console.WriteLine($"{node.data} inserted in to LinkedList");
+            Console.WriteLine($"{node.data} Append in to LinkedList");
         }
     }
 }

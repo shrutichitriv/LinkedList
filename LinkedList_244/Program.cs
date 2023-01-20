@@ -1,4 +1,6 @@
-﻿namespace LinkedList_244
+﻿using System.Collections.Generic;
+
+namespace LinkedList_244
 {
     internal class Program
     {
@@ -6,15 +8,10 @@
         {
             Console.WriteLine("Creating Project For LinkedList Program");
 
-            LinkedList<int> linkedList = new LinkedList<int>();
-            linkedList.AddLast(56);
-            linkedList.AddLast(30);
-            linkedList.AddLast(70);
-
-            foreach (int item in linkedList)
-            {
-                Console.WriteLine(item);
-            }
+            LinkedList myLinkedList = new LinkedList();
+            myLinkedList.Add(30);
+            myLinkedList.Add(56);
+            myLinkedList.Add(70);
         }
     }
 }

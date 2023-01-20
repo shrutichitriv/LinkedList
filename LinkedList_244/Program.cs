@@ -9,9 +9,16 @@ namespace LinkedList_244
             Console.WriteLine("Creating Project For LinkedList Program");
 
             LinkedList myLinkedList = new LinkedList();
-            myLinkedList.Append(30);
-            myLinkedList.Append(56);
-            myLinkedList.Append(70);
+            myLinkedList.Add(30);
+            myLinkedList.Add(56);
+            myLinkedList.Add(70);
+            myLinkedList.Add(10);
+            myLinkedList.Add(20);
+            myLinkedList.Add(40);
+            //myLinkedList.InserttoLnkLst(4, 88);
+
+            myLinkedList.InsertMethod(88, 1);
+            myLinkedList.DiaplayLnkLst();
         }
     }
 }

@@ -16,10 +16,10 @@ namespace LinkedList_244
             myLinkedList.Add(20);
             myLinkedList.Add(40);
 
-            //myLinkedList.InsertMethod(88, 1);
-
-            myLinkedList.DeleteFirstElemt();
-            myLinkedList.DiaplayLnkLst();
+            //myLinkedList.InsertMethod(88, 1);          
+            //myLinkedList.DeleteFirstElemt();
+            myLinkedList.DeleteLastElement();
+            myLinkedList.DisplayLnkLst();
         }
     }
 }

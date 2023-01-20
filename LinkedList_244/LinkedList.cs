@@ -114,18 +114,34 @@ namespace LinkedList_244
                 }
             }
         }
-        public Node DeleteFirstElemt()
+        public void DeleteFirstElemt()
+        {
+            Node temp = head.next;
+            head = head.next;
+
+        }
+        public Node DeleteLastElement()
         {
             if (this.head == null)
             {
-                Console.WriteLine("The LinkedList is Empty"); ;
+                return null;
             }
-            this.head = head.next;
-            return this.head;
+            if (this.head.next == null)
+            {
+                return null;
+            }
+            Node temp = this.head;
+            while (temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
+            return head;
+
         }
 
 
-        public void DiaplayLnkLst()
+        public void DisplayLnkLst()
         {
             Node temp = this.head;
             if (temp == null)

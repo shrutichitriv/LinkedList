@@ -114,11 +114,14 @@ namespace LinkedList_244
                 }
             }
         }
-        public void DeleteFirstElemt()
+        public Node DeleteFirstElemt()
         {
-            Node temp = head.next;
-            head = head.next;
-
+            if (this.head == null)
+            {
+                Console.WriteLine("The LinkedList is Empty"); ;
+            }
+            this.head = head.next;
+            return this.head;
         }
         public Node DeleteLastElement()
         {
@@ -139,6 +142,31 @@ namespace LinkedList_244
             return head;
 
         }
+        public void SearchAValue(int value)
+        {
+            Node temp = this.head;
+            int find = 0;
+            int i = 0;
+            while (temp != null)
+            {
+                i++;
+                if (temp.data == value)
+                {
+                    find++;
+                    break;
+                }
+                temp = temp.next;
+            }
+            if (find == 1)
+            {
+                Console.WriteLine($"The position of value {value} is {i}");
+            }
+            else
+            {
+                Console.WriteLine("The value {0} not present in LinkedList", value);
+            }
+        }
+
 
 
         public void DisplayLnkLst()
@@ -146,7 +174,7 @@ namespace LinkedList_244
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("The LinkedList is Emptay");
+                Console.WriteLine("The LinkedList is Empty");
                 return;
             }
             else
@@ -160,6 +188,5 @@ namespace LinkedList_244
 
             }
         }
-
     }
 }

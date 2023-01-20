@@ -18,7 +18,8 @@ namespace LinkedList_244
 
             //myLinkedList.InsertMethod(88, 1);          
             //myLinkedList.DeleteFirstElemt();
-            myLinkedList.DeleteLastElement();
+            //myLinkedList.DeleteLastElement();
+            myLinkedList.SearchAValue(70);
             myLinkedList.DisplayLnkLst();
         }
     }
